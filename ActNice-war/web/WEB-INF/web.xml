@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <display-name>ActNiceServlet</display-name>
+    <servlet>
+        <servlet-name>ActNiceServlet</servlet-name>
+        <servlet-class>com.example.ActNiceServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ActNiceServlet</servlet-name>
+        <url-pattern>/ActNiceServlet</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            300
+        </session-timeout>
+    </session-config>
+    <ejb-local-ref>
+        <ejb-ref-name>ejb/ActNiceBean</ejb-ref-name>
+        <ejb-ref-type>Session</ejb-ref-type>
+        <local-home/>
+        <local>com.example.ActNiceBeanLocal</local>
+    </ejb-local-ref>
+</web-app>
